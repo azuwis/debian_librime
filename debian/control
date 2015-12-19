@@ -18,7 +18,7 @@ Build-Depends: cmake,
                libgoogle-glog-dev,
                libleveldb-dev,
                libmarisa-dev,
-               libopencc-dev,
+               libopencc-dev (>= 1.0),
                libyaml-cpp-dev,
                x11proto-core-dev,
                zlib1g-dev
