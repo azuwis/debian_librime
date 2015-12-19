@@ -1,0 +1,3 @@
+# with Files-Excluded, this lintian check should be removed
+# see https://bugs.debian.org/748465
+librime source: debian-watch-file-should-dversionmangle-not-uversionmangle

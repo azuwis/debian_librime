@@ -1,0 +1,3 @@
+version=3
+opts="uversionmangle=s/$/+dfsg/" \
+    https://github.com/lotem/librime/tags .*/rime-(\d[\d\.]+)\.tar\.gz
