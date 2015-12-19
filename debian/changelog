@@ -1,3 +1,9 @@
+librime (1.2+git164+8dde91a-brew1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Zhong Jianxin <azuwis@gmail.com>  Sun, 20 Dec 2015 00:23:49 +0800
+
 librime (1.2+dfsg-2) unstable; urgency=medium
 
   * Rebuild with libyaml-cpp0.5, 0.5.2. (Closes: #784199)
