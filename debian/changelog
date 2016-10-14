@@ -1,3 +1,9 @@
+librime (1.2.9+git168+0e36198-brew1) UNRELEASED; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Zhong Jianxin <azuwis@gmail.com>  Mon, 17 Oct 2016 22:10:17 +0800
+
 librime (1.2.9+dfsg1-1) unstable; urgency=medium
 
   * Imported Upstream version 1.2.9+dfsg1
