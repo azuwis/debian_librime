@@ -1,0 +1,99 @@
+Source: librime
+Section: libs
+Priority: optional
+Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Uploaders: Qijiang Fan <fqj1994@gmail.com>,
+           Aron Xu <aron@debian.org>,
+           YunQiang Su <wzssyqa@gmail.com>,
+           Osamu Aoki <osamu@debian.org>,
+           Guo Yixuan (郭溢譞) <culu.gyx@gmail.com>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               libboost-dev,
+               libboost-filesystem-dev,
+               libboost-regex-dev,
+               libboost-signals-dev,
+               libboost-system-dev,
+               libboost-thread-dev,
+               libgoogle-glog-dev,
+               libleveldb-dev,
+               libmarisa-dev,
+               libopencc-dev (>= 1.0.1),
+               libyaml-cpp-dev,
+               x11proto-core-dev,
+               zlib1g-dev
+Standards-Version: 3.9.8
+Homepage: https://github.com/rime/librime
+Vcs-Git: git://anonscm.debian.org/pkg-ime/librime.git
+Vcs-Browser: https://anonscm.debian.org/gitweb/?p=pkg-ime/librime.git;a=summary
+
+Package: librime1
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: librime-bin, librime-data
+Description: Rime Input Method Engine - core library
+ RIME is the acronym of Rime Input Method Engine.
+ .
+ RIME is a lightweight, extensible input method engine supporting various input
+ schematas including glyph-based input methods, romanization-based input methods
+ as well as those for Chinese dialects. It has the ability to compose phrases
+ and sentences intelligently and provide very accurate traditional Chinese
+ output. RIME's cross-platform core library is written in C++, and can work
+ consistently on different platforms with OS-specific wrappers.
+ .
+ This package provides the core library of RIME.
+
+Package: librime-bin
+Architecture: any
+Depends: librime1 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Recommends: librime-data
+Description: Rime Input Method Engine - utilities
+ RIME is the acronym of Rime Input Method Engine.
+ .
+ RIME is a lightweight, extensible input method engine supporting various input
+ schematas including glyph-based input methods, romanization-based input methods
+ as well as those for Chinese dialects. It has the ability to compose phrases
+ and sentences intelligently and provide very accurate traditional Chinese
+ output. RIME's cross-platform core library is written in C++, and can work
+ consistently on different platforms with OS-specific wrappers.
+ .
+ This package provides the executable utilities of RIME.
+Section: utils
+
+Package: librime-dev
+Architecture: all
+Section: libdevel
+Depends: librime1 (<< ${source:Upstream-Version}.0~),
+         librime1 (>= ${source:Version}),
+         ${misc:Depends}
+Provides: librime1-dev
+Conflicts: librime1-dev
+Replaces: librime1-dev
+Description: Rime Input Method Engine, the core library - development files
+ RIME is the acronym of Rime Input Method Engine.
+ .
+ RIME is a lightweight, extensible input method engine supporting various input
+ schematas including glyph-based input methods, romanization-based input methods
+ as well as those for Chinese dialects. It has the ability to compose phrases
+ and sentences intelligently and provide very accurate traditional Chinese
+ output. RIME's cross-platform core library is written in C++, and can work
+ consistently on different platforms with OS-specific wrappers.
+ .
+ This package provides the development files of RIME.
+
+Package: librime1-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: librime1 (= ${binary:Version}), ${misc:Depends}
+Description: Rime Input Method Engine, the core library - debugging symbols
+ RIME is the acronym of Rime Input Method Engine.
+ .
+ RIME is a lightweight, extensible input method engine supporting various input
+ schematas including glyph-based input methods, romanization-based input methods
+ as well as those for Chinese dialects. It has the ability to compose phrases
+ and sentences intelligently and provide very accurate traditional Chinese
+ output. RIME's cross-platform core library is written in C++, and can work
+ consistently on different platforms with OS-specific wrappers.
+ .
+ This package provides the debugging symbols of RIME.
